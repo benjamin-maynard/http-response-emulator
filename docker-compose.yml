@@ -1,0 +1,10 @@
+# Docker Compose Image for Local Testing
+version: '3'
+services:
+  http-response-emulator:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - RESPONSE_CODE=500
